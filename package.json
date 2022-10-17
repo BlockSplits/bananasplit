@@ -8,6 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "test": "jest --watch --coverage=false --changedSince=origin/main"
+    "export": "next export"
   },
   "moduleDirectories": [
     "node_modules",
