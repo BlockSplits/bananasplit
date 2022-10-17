@@ -5,16 +5,6 @@ export type TransactionFormat = {
   readonly payer: number;
 };
 
-// const transactions: TransactionFormat[] = [
-//   { amount: 150, description: "Hotel", participants: [1, 2, 3], payer: 1 },
-//   { amount: 100, description: "Car", participants: [1, 2, 3, 4], payer: 4 },
-//   { amount: 100, description: "Food", participants: [3, 4], payer: 3 },
-// ];
-
-// const participants = new Set(
-//   transactions.flatMap((array) => [...array.participants, array.payer])
-// );
-
 /**
  * Take list of transactions and get the debt from a single
  * @param {number} particularUser
