@@ -1,5 +1,4 @@
 import Fuzz from "jest-fuzz";
-import { string } from "jest-fuzz/dist/types/fuzzers";
 
 // Test getDebtAmount
 import { getDebtAmounts, TransactionFormat } from "./split";
@@ -8,12 +7,6 @@ declare global {
   var fuzz: { iterations: number };
 }
 fuzz = { iterations: 10 };
-
-// const transactions: TransactionFormat[] = [
-//   { amount: 150, description: "Hotel", participants: [1, 2, 3], payer: 1 },
-//   { amount: 100, description: "Car", participants: [1, 2, 3, 4], payer: 4 },
-//   { amount: 100, description: "Food", participants: [3, 4], payer: 3 },
-// ];
 
 describe("Test Debt Amounts", () => {
   test("Trivial Case", () => {
