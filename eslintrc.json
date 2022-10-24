@@ -8,5 +8,5 @@
     }
   },
   "ignorePatterns": ["node_modules/**/*"],
-  "extends": ["next/core-web-vitals", "plugin:@typescript-eslint/recommended", "plugin:prettier/recommended"]
+  "extends": ["next/core-web-vitals", "plugin:@typescript-eslint/recommended", "plugin:prettier/recommended"],
 }
