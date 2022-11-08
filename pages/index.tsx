@@ -59,6 +59,33 @@ const Home: NextPage = () => {
           </div>
         </div>
       </section>
+      <section>
+        <div className="mx-auto max-w-screen-xl">
+          <div className="flex mt-10">
+            <div className="flex-1 flex justify-center">
+              <div>
+                <Image src="/blocks.png" alt="split" width={56} height={52} />
+                <h2 className="font-bold">Create Group</h2>
+                <p>Organize with a group. Add your frens.</p>
+              </div>
+            </div>
+            <div className="flex-1 flex justify-center">
+              <div>
+                <Image src="/blocks.png" alt="split" width={56} height={52} />
+                <h2 className="font-bold">Add expense</h2>
+                <p>You can create a group. Add friends. Add expenses.</p>
+              </div>
+            </div>
+            <div className="flex-1 flex justify-center">
+              <div>
+                <Image src="/blocks.png" alt="split" width={56} height={52} />
+                <h2 className="font-bold">Settle debts</h2>
+                <p>You can settle debts with 1 transaction. USDC or DAI.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   )
 }
