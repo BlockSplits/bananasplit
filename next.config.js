@@ -3,14 +3,12 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   trailingSlash: true,
-  exportPathMap: async function (
-    defaultPathMap,
-    { dev, dir, outDir, distDir, buildId }
-  ) {
+  images: { unoptimized: true },
+  exportPathMap: async function (defaultPathMap, { dev, dir, outDir, distDir, buildId }) {
     return {
-      "/": { page: "/" },
-    };
+      '/': { page: '/' },
+    }
   },
-};
+}
 
-module.exports = nextConfig;
+module.exports = nextConfig
