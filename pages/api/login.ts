@@ -1,8 +1,7 @@
-import { createClient } from '@supabase/supabase-js'
 import type { NextApiRequest, NextApiResponse } from 'next'
 import jwt, { Secret } from 'jsonwebtoken'
 import { ethers } from 'ethers'
-import { getSupabase } from '../../utils/supabase'
+import { getSupabase } from '../../src/utils/supabase'
 
 type Data =
   | {
@@ -14,7 +13,7 @@ type Data =
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse<Data>) {
   try {
-    const { walletAddress, signature, message } = await await JSON.parse(req.body)
+    const { walletAddress, signature, message } = await JSON.parse(req.body)
 
     const account = ethers.utils.verifyMessage(message, signature)
 
@@ -31,7 +30,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
     const token = await jwt.sign(
       {
         exp: Math.floor(Date.now() / 1000 + 60 * 60),
-        sub: user?.id,
+        user_id: user?.id,
       },
       process.env.SUPABASE_JWT_SECRET as Secret
     )

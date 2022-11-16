@@ -1,10 +1,14 @@
 import '../styles/globals.css'
 import type { AppProps } from 'next/app'
 import { chain, configureChains, createClient, WagmiConfig } from 'wagmi'
-import { jsonRpcProvider } from 'wagmi/providers/jsonRpc'
 import { publicProvider } from 'wagmi/providers/public'
 import { connectorsForWallets, RainbowKitProvider } from '@rainbow-me/rainbowkit'
 import { injectedWallet, metaMaskWallet, coinbaseWallet, walletConnectWallet } from '@rainbow-me/rainbowkit/wallets'
+import { QueryClient, QueryClientProvider } from 'react-query'
+import { useState } from 'react'
+import { SupabaseQueryProvider } from '../src/context/SupabaseQueryProvider'
+import { SupabaseClient } from '@supabase/supabase-js'
+import { getClientSupabase } from '../src/utils/supabase'
 
 const { chains, provider } = configureChains([chain.mainnet], [publicProvider()])
 
@@ -28,11 +32,17 @@ const wagmiClient = createClient({
   provider,
 })
 
+const queryClient = new QueryClient()
+
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <WagmiConfig client={wagmiClient}>
       <RainbowKitProvider chains={chains}>
-        <Component {...pageProps} />
+        <SupabaseQueryProvider client={getClientSupabase}>
+          <QueryClientProvider client={queryClient}>
+            <Component {...pageProps} />
+          </QueryClientProvider>{' '}
+        </SupabaseQueryProvider>
       </RainbowKitProvider>
     </WagmiConfig>
   )

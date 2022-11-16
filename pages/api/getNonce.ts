@@ -1,6 +1,5 @@
-import { createClient } from '@supabase/supabase-js'
 import type { NextApiRequest, NextApiResponse } from 'next'
-import { getSupabase } from '../../utils/supabase'
+import { getSupabase } from '../../src/utils/supabase'
 
 type Data =
   | {
