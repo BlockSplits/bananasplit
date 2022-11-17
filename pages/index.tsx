@@ -24,13 +24,11 @@ const Home: NextPage = () => {
                 />
               </a>
             </Link>
-            <div className="flex items-center lg:order-2">
-              <Link href={'/login'}>
-                <div className="cursor-pointer text-gray-800 bg-orange-50 hover:bg-orange-150 ring-2 ring-gray-800 focus:ring-2 focus:ring-orange-300 font-regular rounded-lg text-sm px-2 lg:px-2 py-1 lg:py-1 mr-2 focus:outline-none flex items-center rounded-2xl">
-                  <span>Login with wallet</span>
-                </div>
-              </Link>
-            </div>
+            <Link href={'/login'}>
+              <div className="cursor-pointer text-gray-800 bg-orange-50 hover:bg-orange-150 ring-2 ring-gray-800 focus:ring-2 focus:ring-orange-300 font-regular rounded-lg text-sm px-2 lg:px-2 py-1 lg:py-1 mr-2 focus:outline-none flex items-center rounded-2xl">
+                <span>Login with wallet</span>
+              </div>
+            </Link>
           </div>
         </nav>
       </header>
@@ -49,10 +47,13 @@ const Home: NextPage = () => {
             </span>{' '}
             bills with web3 frens
           </h1>
+
           <div className="w-full flex justify-center">
-            <button className="text-gray-800 bg-yellow-400 hover:bg-yellow-300 ring-2 ring-gray-500 px-10 py-1 rounded-2xl">
-              Connect wallet
-            </button>
+            <Link href={'/login'}>
+              <div className="cursor-pointer text-gray-800 bg-yellow-400 hover:bg-yellow-300 ring-2 ring-gray-500 focus:ring-2 focus:ring-orange-300 font-regular text-sm px-10 lg:px-10 py-1 lg:py-1 mr-2 focus:outline-none flex items-center rounded-2xl">
+                <span>Start spliting bills</span>
+              </div>
+            </Link>
           </div>
         </div>
       </section>

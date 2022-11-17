@@ -5,9 +5,7 @@ import { publicProvider } from 'wagmi/providers/public'
 import { connectorsForWallets, RainbowKitProvider } from '@rainbow-me/rainbowkit'
 import { injectedWallet, metaMaskWallet, coinbaseWallet, walletConnectWallet } from '@rainbow-me/rainbowkit/wallets'
 import { QueryClient, QueryClientProvider } from 'react-query'
-import { useState } from 'react'
 import { SupabaseQueryProvider } from '../src/context/SupabaseQueryProvider'
-import { SupabaseClient } from '@supabase/supabase-js'
 import { getClientSupabase } from '../src/utils/supabase'
 
 const { chains, provider } = configureChains([chain.mainnet], [publicProvider()])

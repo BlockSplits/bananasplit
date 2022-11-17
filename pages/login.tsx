@@ -3,7 +3,6 @@ import type { NextPage } from 'next'
 import Cookies from 'js-cookie'
 
 import { ConnectButton } from '../src/components/ConnectButton'
-//import { ConnectButton } from '@rainbow-me/rainbowkit'
 import { useAccount, useSignMessage } from 'wagmi'
 import { useCallback, useEffect, useState } from 'react'
 import { useSupabaseQuery } from '../src/hooks/useSupabaseQuery'
