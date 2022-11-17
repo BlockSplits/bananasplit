@@ -9,6 +9,11 @@ const nextConfig = {
       '/': { page: '/' },
     }
   },
+  experimental: {
+    images: {
+      allowFutureImage: true,
+    },
+  },
 }
 
 module.exports = nextConfig

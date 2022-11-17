@@ -25,12 +25,9 @@ const Home: NextPage = () => {
               </a>
             </Link>
             <div className="flex items-center lg:order-2">
-              <Link href={'/'}>
+              <Link href={'/login'}>
                 <div className="cursor-pointer text-gray-800 bg-orange-50 hover:bg-orange-150 ring-2 ring-gray-800 focus:ring-2 focus:ring-orange-300 font-regular rounded-lg text-sm px-2 lg:px-2 py-1 lg:py-1 mr-2 focus:outline-none flex items-center rounded-2xl">
-                  <span className="mr-2">
-                    <Image src="/diogomf.png" alt="diogomf" width={28} height={28} />
-                  </span>
-                  <span>diogomf.eth</span>
+                  <span>Login with wallet</span>
                 </div>
               </Link>
             </div>
